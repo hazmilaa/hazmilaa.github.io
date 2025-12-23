@@ -2,29 +2,44 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Profil Saya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesehatan Mental</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Halo, Saya mila</h1>
-        <p>Mahasiswa yang sedang belajar pemrograman dan teknologi web.</p>
 
-        <h2>Tentang Saya</h2>
-        <p>
-            Saya tertarik pada pengembangan website, GitHub, dan teknologi informasi.
-            Website ini dibuat sebagai tugas GitHub Pages.
-        </p>
+<header>
+    <h1>MindCare</h1>
+    <p>Rawat Kesehatan Mentalmu Setiap Hari</p>
+</header>
 
-        <h2>Kontak</h2>
-        <ul>
-            <li>Email: contoh@email.com</li>
-            <li>GitHub: https://github.com/username</li>
-        </ul>
+<section class="affirmation">
+    <h2>Afirmasi Hari Ini</h2>
+    <p id="quote">Klik tombol di bawah ✨</p>
+    <button onclick="generateQuote()">Dapatkan Afirmasi</button>
+</section>
 
-        <footer>
-            <p>© 2025 | GitHub Pages</p>
-        </footer>
+<section class="tips">
+    <h2>Tips Menjaga Kesehatan Mental</h2>
+    <div class="cards">
+        <div class="card">🧘‍♀️ Luangkan waktu untuk diri sendiri</div>
+        <div class="card">💬 Ceritakan perasaanmu ke orang terpercaya</div>
+        <div class="card">😴 Tidur yang cukup dan teratur</div>
+        <div class="card">📵 Batasi penggunaan media sosial</div>
     </div>
+</section>
+
+<section class="reflection">
+    <h2>Refleksi Perasaan</h2>
+    <textarea placeholder="Tulis perasaanmu hari ini..."></textarea>
+    <button onclick="saveReflection()">Simpan</button>
+    <p id="saved"></p>
+</section>
+
+<footer>
+    <p>© 2025 MindCare | Peduli Kesehatan Mental</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
