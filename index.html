@@ -3,43 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kesehatan Mental</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sejiwa | Kesehatan Mental</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #7f9cf5, #a5b4fc);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+        }
+
+        section {
+            padding: 2rem 1rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .affirmation, .reflection {
+            text-align: center;
+        }
+
+        button {
+            background: #7f9cf5;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #667eea;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            height: 120px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #e2e8f0;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>MindCare</h1>
-    <p>Rawat Kesehatan Mentalmu Setiap Hari</p>
+    <h1>Sejiwa</h1>
+    <p>Ruang Aman untuk Menjaga Kesehatan Mental</p>
 </header>
 
 <section class="affirmation">
     <h2>Afirmasi Hari Ini</h2>
-    <p id="quote">Klik tombol di bawah ✨</p>
-    <button onclick="generateQuote()">Dapatkan Afirmasi</button>
+    <p id="quote">Klik tombol untuk mendapatkan afirmasi ✨</p>
+    <button onclick="generateQuote()">Afirmasi</button>
 </section>
 
 <section class="tips">
     <h2>Tips Menjaga Kesehatan Mental</h2>
     <div class="cards">
         <div class="card">🧘‍♀️ Luangkan waktu untuk diri sendiri</div>
-        <div class="card">💬 Ceritakan perasaanmu ke orang terpercaya</div>
-        <div class="card">😴 Tidur yang cukup dan teratur</div>
-        <div class="card">📵 Batasi penggunaan media sosial</div>
+        <div class="card">💬 Cerita ke orang yang kamu percaya</div>
+        <div class="card">😴 Tidur cukup dan teratur</div>
+        <div class="card">📵 Kurangi media sosial berlebihan</div>
     </div>
 </section>
 
 <section class="reflection">
     <h2>Refleksi Perasaan</h2>
-    <textarea placeholder="Tulis perasaanmu hari ini..."></textarea>
+    <textarea placeholder="Tulis perasaanmu hari ini..."></textarea><br>
     <button onclick="saveReflection()">Simpan</button>
     <p id="saved"></p>
 </section>
 
 <footer>
-    <p>© 2025 MindCare | Peduli Kesehatan Mental</p>
+    <p>© 2025 Sejiwa | Peduli Kesehatan Mental</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+    const quotes = [
+        "Aku berharga dan pantas bahagia 🌱",
+        "Tidak apa-apa untuk beristirahat",
+        "Perasaanku valid dan penting",
+        "Aku melakukan yang terbaik hari ini",
+        "Langkah kecil tetap berarti"
+    ];
+
+    function generateQuote() {
+        const random = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").innerText = quotes[random];
+    }
+
+    function saveReflection() {
+        document.getElementById("saved").innerText =
+            "Perasaanmu tersimpan. Terima kasih sudah jujur pada diri sendiri 💙";
+    }
+</script>
+
 </body>
-</html>
+    </html>
+    
